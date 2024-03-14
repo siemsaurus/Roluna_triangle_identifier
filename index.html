@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle?</title>
+</head>
+<body>
+    <h1 onclick= main()>Wanna find out?</h1>
+    <script>
+    function main(){
+        window.alert("Is it a triangle? Input numbers:")
+        var a = Number(prompt("Enter A:"));
+        var b = Number(prompt("Enter B:"));
+        var c = Number(prompt("Enter C:"));
+        if(isNaN(a) || isNaN(b) || isNaN(c)){
+            window.alert("NOT A TRIANGLE!")
+        }
+        else{
+            determineTriangle(a,b,c);
+        }
+    }
+    function determineTriangle(a,b,c){
+        if (a==b && b==c){
+            window.alert("Equilateral triangle");
+        }
+        else if (a==b || b==c || c==a){
+            window.alert("Isosceles triangle");
+        }
+        else{
+            window.alert("Scalene triangle");
+        }
+    }
+    </script>
+</body>
+</html>
